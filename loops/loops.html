@@ -13,10 +13,24 @@
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
-
+var guesses =0;
 var randomInt = getRandomInt(1, 100);
-/* END STARTING CODE */
-var
+var guess= prompt("guess what's the number ")
+while (!(randomInt==guess)){
+if (randomInt<=guess){
+	alert("you guessed too high");
+	guesses ++;
+}
+else if (randomInt>=guess){
+	alert("you guessed too low");
+	guesses ++;
+guess=prompt("guess what's the number ");
+}
+}
+
+ {alert("you guessed correctly and your guesses were " + guesses);
+}
+
 
     </script>
 </body>

@@ -14,9 +14,17 @@ function isLetter(char) {
     char = char.toLowerCase();
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
 }
-
-// Write your isPalindrome function here!
-
+var word=prompt("enter any word");
+function isPalindrome() {
+	word =word.split('');
+	for (var i=0 ; i<word.length;i++){
+		isLetter(word[i]);
+		if(word[i]!=word[word.length-i-1]){
+			return false
+		}
+	}
+	return true;
+	}
     </script>
 </body>
 
